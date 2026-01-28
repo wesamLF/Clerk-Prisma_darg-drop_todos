@@ -10,10 +10,10 @@ const Navbar = async () => {
   return (
     <nav className="navbar text-base bg-base-100 shadow-sm ">
       <div className="flex-1 flex justfiy-center items-center space-x-6">
-        <Link href={"/"}> 
-        <img src="/logo.png" alt="Logo" className=" h-16 object-contain" />
+        <Link href={"/"}>
+          <img src="/logo.png" alt="Logo" className=" h-16 object-contain" />
         </Link>
-        <Link href={"/about-us"} className="">About us</Link>
+        <Link href={"/about-us"} className=" hidden md:inline">About us</Link>
 
       </div>
       <div className="">
@@ -21,10 +21,14 @@ const Navbar = async () => {
           <div className="flex justify-between items-center gap-6 ">
 
             <Link href={"/todos"} className="">My Todos</Link>
-            {email !== "test@test.com" && <UserButton />}
-            <SignOutButton redirectUrl="/signin" >
-              <button className="btn btn-link btn-error">Log out</button>
-            </SignOutButton>
+            {email !== "test@test.com" ?
+              <UserButton /> :
+              <SignOutButton redirectUrl="/signin" >
+                <button className="btn btn-link btn-error">Log out</button>
+              </SignOutButton>
+
+            }
+          
           </div>
         </SignedIn>
         <SignedOut>

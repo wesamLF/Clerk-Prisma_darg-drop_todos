@@ -18,12 +18,10 @@ export default function CTAsection() {
       </p>
 
       <div className="flex flex-col md:flex-row justify-center gap-4">
-        <a href="/signup" className="btn btn-primary btn-lg">
-          Create Free Account
+        <a href="/todos" className="btn btn-primary btn-lg">
+          Try it now!
         </a>
-        <a href="/signin" className="btn btn-ghost btn-lg">
-          I Already Have One
-        </a>
+       
       </div>
     </div>
   </div>

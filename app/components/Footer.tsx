@@ -9,7 +9,7 @@ export default function Footer() {
 
         {/* Links */}
         <div className="flex gap-6">
-          <a href="/about" className="link link-hover">About</a>
+          <a href="/about-us" className="link link-hover">About</a>
           <a href="/privacy" className="link link-hover">Privacy</a>
           <a href="/contact" className="link link-hover">Contact</a>
         </div>

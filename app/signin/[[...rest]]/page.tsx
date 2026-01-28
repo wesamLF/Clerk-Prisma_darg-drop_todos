@@ -39,10 +39,10 @@ export default function SignInPage() {
               </div>
 
               <div
-                onClick={() => copyToClipboard("password", "12345678")}
+                onClick={() => copyToClipboard("password", "TT1234@@Mxp009")}
                 className=" cursor-pointer flex justify-between items-center px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200"
               >
-                <span className="btn btn-info text-base">Password: 12345678</span>
+                <span className="btn btn-info text-base">Password: TT1234@@Mxp009</span>
                 <span className="text-gray-500">{copied === "password" ? "✔️" : "copy"}</span>
               </div>
             </div>
