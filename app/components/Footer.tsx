@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         {/* Logo / App Name */}
         <div className="font-bold text-xl">
-          TodoJoy
+          WeTODO
         </div>
 
         {/* Links */}

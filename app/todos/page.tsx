@@ -10,7 +10,7 @@ export default async function Page() {
   const { data } = await getAllTodos()
 
   return (
-    <div className="py-4">
+    <div className="pt-4 pb-10">
         <Board initialTodos={data} />
 
     </div>

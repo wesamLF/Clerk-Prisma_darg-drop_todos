@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut, SignIn, SignOutButton, UserAvatar, UserButton } from '@clerk/nextjs'
-import {  currentUser } from '@clerk/nextjs/server'
+import { currentUser } from '@clerk/nextjs/server'
 import Link from 'next/link'
 
 const Navbar = async () => {
@@ -9,8 +9,10 @@ const Navbar = async () => {
 
   return (
     <nav className="navbar text-base bg-base-100 shadow-sm ">
-      <div className="flex-1 space-x-6">
-        <Link href={"/"} className=" ">WeTODO</Link>
+      <div className="flex-1 flex justfiy-center items-center space-x-6">
+        <Link href={"/"}> 
+        <img src="/logo.png" alt="Logo" className=" h-16 object-contain" />
+        </Link>
         <Link href={"/about-us"} className="">About us</Link>
 
       </div>
