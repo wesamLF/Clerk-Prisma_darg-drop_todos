@@ -3,8 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createTodo, deleteTodoById, updateTodoStatusById } from "../data/todo"
 import { auth } from "@clerk/nextjs/server";
-import { delay } from "../delay";
-import { date } from "zod";
+
 
 
 
@@ -57,12 +56,3 @@ export const UpdateTodoStatusAction = async (id: string, completed: boolean) => 
 }
 
 
-export const UpdateTest = async () => {
-    // if (!result.success) {
-    //     return { success: false, message: result?.message }
-    // }
-    revalidatePath("/todos")
-
-    return { success: true, message: "result?.messagessss" }
-
-}

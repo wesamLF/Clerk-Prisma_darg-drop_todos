@@ -1,11 +1,7 @@
 import "server-only"
-import { PrismaClient } from "../../app/generated/prisma";
 import prisma from "../prisma";
 import { CreateTodoSchema, TestSchema, TodoSchema, TodosListSchema, type CreateTodoType, type Todo } from "./todo.schema";
-import { error } from "console";
-import { delay } from "../delay";
 import { auth } from "@clerk/nextjs/server";
-import { date } from "zod";
 
 
 
@@ -65,31 +61,6 @@ export const getAllTodos = async (query?: string | null, completed?: boolean | n
 
 };
 
-// export const getAllTodosWithFilters = async (query: string) => {
-//     const { userId } = await auth(); // get the logged-in user
-//     if (!userId) return { success: false, message: "Unauthorized", data: [] };
-//     // await delay(2000)
-//     try {
-//         const todos = await prisma.todo.findMany({
-//             where: { userId },
-//             orderBy: { createdAt: "desc" },
-//         });
-//         if (todos?.length == 0) {
-//             return { success: true, message: "no todos found", data: [] }
-//         }
-//         const result = TodosListSchema.safeParse(todos)
-//         if (!result.success) {
-//             return { success: false, message: "bad data", data: [] };
-//         }
-//         return { success: true, message: "found successflly", data: result.data }
-//     } catch (err) {
-//         console.error("error", err);
-//         return { success: false, message: "somthing went wrong", data: [] };
-
-//     }
-
-
-// };
 
 
 export const deleteTodoById = async (id: string) => {
