@@ -56,7 +56,7 @@ export default function Board({ initialTodos }: { initialTodos: Todo[] }) {
     }
 
     return (
-        <div className=" ">
+        <div className="">
             <CreateTodoForm setTodos={setTodos} />
 
             <h1 className="text-3xl font-bold my-8 text-center">Drag & Drop Todo Board</h1>
